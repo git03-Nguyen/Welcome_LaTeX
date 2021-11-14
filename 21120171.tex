@@ -1,0 +1,104 @@
+%Nguyen Dinh Anh - 21120171
+%BTVN tuan 03 - Thuc hanh Nhap mon CNTT
+%Code written with Overleaf + TexMaker  
+%--------------------------------------------------------------------
+
+%Define the document class, size,..
+\documentclass[10.5pt,a4paper]{article}
+%Import VNese but not for \date, \chapter,...
+\usepackage[vietnamese,english]{babel}
+%More needed packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+%Define title, author, date
+\title{Hello Latex!}
+\author{Nguyen Dinh Anh - 21120171}
+\date{\today}
+%---------------------------------------------------------------------
+
+\begin{document}
+    \maketitle
+    
+    %SECTION 1: GETTING STARTED
+    \section{Getting Started}
+        \label{sec:getstarted}
+        
+        \textbf{Hello Latex!} Today I am learning \LaTeX. \LaTeX\ is a great program for writing math. I can test Vietnamese language "Học vui thôi".\\
+        \indent I can write in line math such as $a^2+b^2=c^2$. I can also give equations their own space:
+        \begin{equation}
+            \label{eq:example}
+            \gamma ^2 + \theta ^2 = \omega ^2
+        \end{equation}
+        \indent ``Maxwell's equations'' are named for James Clark Maxwell and are as follow:
+        \begin{align}
+            \label{eq:gauss1}
+            &\vec{\nabla} \cdot \vec{E}=\frac{\rho}{\epsilon_0} &&&&\text{Gauss's Law} \\ 
+            \label{eq:gauss2}
+            &\vec{\nabla} \cdot \vec{B}=0 &&&&\text{Gauss's Law for Magnetism}
+        \end{align}
+        Equations \ref{eq:gauss1} and \ref{eq:gauss2} are some of the most important in Physics.
+    
+    %SECTIONS 2: WHAT ABOUT MATRIX EQUATIONS?
+    \section{What about Matrix Equations?}
+        \label{sec:matrixeq}
+        
+        \begin{equation*}
+            \begin{pmatrix}
+                a_{11} & a_{12} & \ldots &a_{1n}\\
+                a_{21} & a_{22} & \ldots &a_{2n}\\
+                \vdots & \vdots & \ddots & \vdots\\
+                a_{n1} & a_{n2} & \ldots & a_{nn}
+            \end{pmatrix}
+            \begin{bmatrix}
+                v_1\\
+                v_2\\
+                \vdots\\
+                v_n
+            \end{bmatrix}
+                =
+                \begin{matrix}
+                w_1\\
+                w_2\\
+                \vdots\\
+                w_n
+            \end{matrix}
+        \end{equation*}
+    
+    %SECTION 3: TABLES AND FIGURES
+    \section{Tables and Figures}
+        \label{sec:tablesfigures}
+        
+        Creating a Table is not unlike creating a matrix:
+        \begin{table}
+            \centering
+            \caption{This is a table that shows how to create different lines as well as different justifications}
+            \begin{tabular}{|l||c|c|r|}
+                \hline
+                x & 1 & 2 & 3\\
+                \hline
+                $f(x)$ & 4 & 8 & 12\\
+                \hline
+                f(x) & 4 & 8 & 123\\
+                \hline
+            \end{tabular}
+        \end{table}
+        
+        \pagebreak %The end of page 1
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=1\textwidth]{img\hcmus}
+            \caption{\label{fig:hcmus}HCM University of science}
+        \end{figure}
+    
+    %REFERENCES
+    \section{Bibliography}
+        \label{sec:bib}
+        
+        You will probably want references in your document so that you can cite articles like \cite{frenkel_fine_2013,frenkel_optical_2013,frenkel_temperature_2012}
+        
+        \bibliographystyle{ieeetr} %Set the bib style to "ieeetr"
+        \bibliography{refs\references}
+
+\end{document}
